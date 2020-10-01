@@ -1,32 +1,43 @@
 #input
-a = [
-  {'name':'Star Plus', 'Category':'Entertainment'},
+channels = [
+  {'name':'Star Plus',  'Category':'Entertainment'},
   {'name':'Zee Cinema', 'Category':'Entertainment'},
-    {'name':'ABP', 'Category':'news'},
-    {'name':'Republic', 'Category':'news'}]
+  {'name':'ABP',        'Category':'news'},
+  {'name':'Republic',   'Category':'news'}
+]
+
+channelCategorizedData = {}
+for channel in channels:
+  channelCat = channel.get("Category")
+  channelName = channel.get("name")
+  if channelCat not in channelCategorizedData:
+    channelCategorizedData[channelCat] = ""
+  channelCategorizedData[channelCat]+=", "+channelName
+channelCategorizedData[channelCat] = channelCategorizedData[channelCat].strip(", ")
+print(channelCategorizedData)
 
 #output
 d=[{'Entertainment':'Star Plus'}, {'news':'ABP, Republic'}]
-temp=''
-temp1=''
-out={}
+# temp=''
+# temp1=''
+# out={}
 
-n=len(a)
-for i in range(n):
-  for x in a[i]:
-    if(x=='Category'):
-      if(a[i][x]=='news'):
-        temp +=  ", " +a[i]['name']
-        out['news'] = temp
-      elif(a[i][x]=='Entertainment'):
-        temp1 +=  ", " +a[i]['name']
-        out['Entertainment'] = temp1
+# n=len(a)
+# for i in range(n):
+#   for x in a[i]:
+#     if(x=='Category'):
+#       if(a[i][x]=='news'):
+#         temp +=  ", " +a[i]['name']
+#         out['news'] = temp
+#       elif(a[i][x]=='Entertainment'):
+#         temp1 +=  ", " +a[i]['name']
+#         out['Entertainment'] = temp1
       
-out['news'] = out['news'].strip(", ")
-out['Entertainment'] = out['Entertainment'].strip(", ")
+# out['news'] = out['news'].strip(", ")
+# out['Entertainment'] = out['Entertainment'].strip(", ")
 
-output = [out]
-print(output)
+# output = [out]
+# print(output) by
 
 # for i in range(3):
 #   for x in a[i]:
