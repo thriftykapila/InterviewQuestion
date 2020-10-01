@@ -1,9 +1,11 @@
+#input
 a = [
   {'name':'Star Plus', 'Category':'Entertainment'},
   {'name':'Zee Cinema', 'Category':'Entertainment'},
     {'name':'ABP', 'Category':'news'},
     {'name':'Republic', 'Category':'news'}]
 
+#output
 d=[{'Entertainment':'Star Plus'}, {'news':'ABP, Republic'}]
 temp=''
 temp1=''
