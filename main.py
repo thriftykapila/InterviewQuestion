@@ -9,15 +9,15 @@ channels = [
 #output
 d=[{'Entertainment':'Star Plus'}, {'news':'ABP, Republic'}]
 
-channelCategorizedData = {}
+out = {}
 for channel in channels:
-  channelCat = channel.get("Category")
-  channelName = channel.get("name")
-  if channelCat not in channelCategorizedData:
-    channelCategorizedData[channelCat] = ""
-  channelCategorizedData[channelCat]+=", "+channelName
-channelCategorizedData[channelCat] = channelCategorizedData[channelCat].strip(", ")
-print(channelCategorizedData)
+  cat = channel.get("Category")
+  name = channel.get("name")
+  if cat not in out:
+    out[cat] = ""
+  out[cat]+=", "+ name
+  out[cat] = out[cat].strip(", ")
+print(out)
 
 # temp=''
 # temp1=''
