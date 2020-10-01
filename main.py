@@ -6,6 +6,9 @@ channels = [
   {'name':'Republic',   'Category':'news'}
 ]
 
+#output
+d=[{'Entertainment':'Star Plus'}, {'news':'ABP, Republic'}]
+
 channelCategorizedData = {}
 for channel in channels:
   channelCat = channel.get("Category")
@@ -16,8 +19,6 @@ for channel in channels:
 channelCategorizedData[channelCat] = channelCategorizedData[channelCat].strip(", ")
 print(channelCategorizedData)
 
-#output
-d=[{'Entertainment':'Star Plus'}, {'news':'ABP, Republic'}]
 # temp=''
 # temp1=''
 # out={}
